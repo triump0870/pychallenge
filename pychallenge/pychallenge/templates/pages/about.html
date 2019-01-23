@@ -10,9 +10,17 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-11">
-            <p>{{about.get_markdown|safe}}</p>
-        </div>
+        <p>{{about.get_markdown|safe}}</p>
+    </div>
+    <div class="row">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form }}
+            </div>
+        </form>
+
+        {{ form.media }}
     </div>
 </div>
 {% endblock content %}
