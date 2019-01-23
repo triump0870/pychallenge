@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-markdownx = "*"
+django-taggit = "*"
+asgiref = "*"
+channels = "*"
+graphene-django = "*"
+sorl-thumbnail = "*"
+awesome-slugify = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-cov = "*"
+pytest-django = "*"
+django-test-plus = "*"
+
+[requires]
+python_version = "3.7"
