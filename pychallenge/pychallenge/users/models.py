@@ -19,12 +19,6 @@ class AboutQuerySet(models.query.QuerySet):
         return self.filter(status="D")
 
 
-class Images(models.Model):
-    user = models.ForeignKey(Users, on_delete=models.CASCADE)
-    timestamp = models.DateTimeField(auto_now_add=True)
-    edited = models.BooleanField(default=False)
-
-
 class About(models.Model):
     DRAFT = "D"
     PUBLISHED = "P"
@@ -38,7 +32,6 @@ class About(models.Model):
     status = models.CharField(max_length=1, choices=STATUS, default=DRAFT)
     content = MarkdownxField()
     edited = models.BooleanField(default=False)
-    images = models.ManyToManyField(Images)
     objects = AboutQuerySet.as_manager()
 
     def __str__(self):
