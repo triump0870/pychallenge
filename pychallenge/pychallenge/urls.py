@@ -27,9 +27,12 @@ from graphene_django.views import GraphQLView
 urlpatterns = [
     url(r'^$',
         TemplateView.as_view(template_name='pages/home.html'), name='home'),
+    url(r'^about/$',
+        TemplateView.as_view(template_name='pages/about.html'), name='about'),
     # Django Admin, use {% url 'admin:index' %}
     path('admin/', admin.site.urls),
     # User management
+    path("accounts/", include("allauth.urls")),
     # url(r'^users/', include('pychallenge.users.urls', namespace='users')),
     # url(r'^accounts/', include('allauth.urls')),
     # Third party apps here
