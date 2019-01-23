@@ -23,12 +23,12 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 from graphene_django.views import GraphQLView
+from pychallenge.users.views import AboutMeView
 
 urlpatterns = [
     url(r'^$',
         TemplateView.as_view(template_name='pages/home.html'), name='home'),
-    url(r'^about/$',
-        TemplateView.as_view(template_name='pages/about.html'), name='about'),
+    url(r'^about/$', AboutMeView.as_view(), name='about'),
     # Django Admin, use {% url 'admin:index' %}
     path('admin/', admin.site.urls),
     # User management
