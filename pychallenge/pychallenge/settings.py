@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     'pychallenge.news.apps.NewsConfig',
     'pychallenge.notifications.apps.NotificationsConfig',
     'pychallenge.qa.apps.QaConfig',
-    'pychallenge.search.apps.SearchConfig'
+    'pychallenge.search.apps.SearchConfig',
+    'pychallenge.users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
