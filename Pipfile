@@ -12,6 +12,8 @@ channels = "*"
 graphene-django = "*"
 sorl-thumbnail = "*"
 awesome-slugify = "*"
+django-allauth = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
 pytest = "*"
