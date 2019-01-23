@@ -332,6 +332,3 @@ pychallenge/media/
 .envs/*
 !.envs/.local/
 
-
-# Sqlite db files
-db.sqlite3
